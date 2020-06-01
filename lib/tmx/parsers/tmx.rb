@@ -191,6 +191,7 @@ module Tmx
               "width" => object.xpath("@width").text.to_i,
               "height" => object.xpath("@height").text.to_i,
               "visible" => to_boolean(object.xpath("@visible").text),
+              "id" => object.xpath("@id").text,
               "properties" => properties(object)
             }
 
