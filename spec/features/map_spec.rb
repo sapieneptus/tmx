@@ -25,6 +25,14 @@ describe Tmx::Map do
         expect(map.objects.find(name: "platform")).to have(1).objects
       end
     end
+
+    describe 'when searching by id' do
+      it 'finds all the objects' do
+        (100..103).each do |id|
+          expect(map.objects.find(id: 100)).to have(1).objects
+        end
+      end
+    end
   end
 
 end

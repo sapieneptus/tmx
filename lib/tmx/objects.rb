@@ -21,7 +21,7 @@ module Tmx
       params = { type: params } if params.is_a?(String)
 
       found_objects = find_all do |object|
-        params.any? {|key,value| object.send(key) == value.to_s }
+        params.any? {|key,value| object.send(key).to_s == value.to_s }
       end.compact
 
       self.class.new found_objects

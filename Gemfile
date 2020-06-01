@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gemspec
 
 group :test, :development do
-  gem 'debugger'
   gem 'rspec'
   gem 'rspec-its'
   gem 'rspec-collection_matchers'

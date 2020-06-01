@@ -181,7 +181,6 @@ module Tmx
 
       def map_object_groups(xml)
         xml.xpath("map/objectgroup").map do |object_group|
-
           objects = object_group.xpath("object").map do |object|
             properties = {
               "name" => object.xpath("@name").text,
@@ -191,7 +190,7 @@ module Tmx
               "width" => object.xpath("@width").text.to_i,
               "height" => object.xpath("@height").text.to_i,
               "visible" => to_boolean(object.xpath("@visible").text),
-              "id" => object.xpath("@id").text,
+              "id" => object.xpath("@id").text.to_i,
               "properties" => properties(object)
             }
 
